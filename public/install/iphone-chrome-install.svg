@@ -1,0 +1,35 @@
+<svg width="720" height="420" viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Passo a passo para instalar no iPhone usando Chrome">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071018"/><stop offset="1" stop-color="#1d1742"/></linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22c55e"/><stop offset="0.5" stop-color="#f59e0b"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="34" fill="url(#bg)"/>
+  <rect x="36" y="36" width="648" height="348" rx="30" fill="#0b1119" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="66" y="82" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="3">IPHONE • CHROME</text>
+  <text x="66" y="120" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="900">Adicionar Chegou Motoca</text>
+  <g transform="translate(70 155)">
+    <rect width="170" height="175" rx="24" fill="#111827" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="85" cy="55" r="31" fill="url(#chrome)" opacity="0.9"/>
+    <circle cx="85" cy="55" r="14" fill="#111827" opacity="0.96"/>
+    <text x="85" y="120" fill="#ffffff" font-family="Arial" font-size="18" font-weight="800" text-anchor="middle">Abra no Chrome</text>
+    <text x="24" y="148" fill="#cbd5e1" font-family="Arial" font-size="14">Entre no site do</text>
+    <text x="24" y="168" fill="#cbd5e1" font-family="Arial" font-size="14">Chegou Motoca</text>
+  </g>
+  <g transform="translate(276 155)">
+    <rect width="170" height="175" rx="24" fill="#111827" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="85" cy="55" r="28" fill="#38bdf8" opacity="0.18"/>
+    <text x="85" y="64" fill="#93c5fd" font-family="Arial" font-size="34" text-anchor="middle">2</text>
+    <text x="85" y="112" fill="#ffffff" font-family="Arial" font-size="18" font-weight="800" text-anchor="middle">Compartilhar</text>
+    <rect x="52" y="129" width="66" height="38" rx="12" fill="url(#btn)"/>
+    <path d="M85 156V118M72 131l13-13 13 13" fill="none" stroke="#082f49" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(482 155)">
+    <rect width="170" height="175" rx="24" fill="#111827" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="85" cy="55" r="28" fill="#22c55e" opacity="0.18"/>
+    <text x="85" y="64" fill="#86efac" font-family="Arial" font-size="34" text-anchor="middle">3</text>
+    <text x="24" y="112" fill="#ffffff" font-family="Arial" font-size="18" font-weight="800">Adicionar</text>
+    <text x="24" y="140" fill="#cbd5e1" font-family="Arial" font-size="14">Toque em “Adicionar</text>
+    <text x="24" y="160" fill="#cbd5e1" font-family="Arial" font-size="14">à Tela de Início”</text>
+  </g>
+</svg>

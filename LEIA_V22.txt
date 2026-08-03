@@ -1,0 +1,22 @@
+Chegou Motoca v22
+
+Base: v21 Supabase Core com correção de build.
+
+O que entrou:
+- Corrigido admin r.telefone -> r.whatsapp.
+- Removidos arquivos .js gerados/duplicados dentro de src.
+- Fluxo novo /cadastro para motoboy e estabelecimento.
+- Motoboy informa nome, usuário, e-mail, WhatsApp, senha numérica, CPF, placa, PIX, foto e origem opcional.
+- Estabelecimento informa nome, usuário, e-mail, WhatsApp, senha numérica, documento CPF/CNPJ, responsável e endereço.
+- Cadastros entram como pendentes no runtime e no Supabase se a tabela registration_applications existir.
+- Admin ganhou aba Cadastros para aprovar/recusar e falar no WhatsApp.
+- Ao aprovar, o cadastro vira motoboy/estabelecimento ativo no runtime e tenta persistir no Supabase.
+- Login e home receberam links para cadastro e recuperação de acesso.
+- Rota /recuperar-acesso adicionada com recuperação assistida via WhatsApp.
+
+SQL:
+- Rode chegoumotoca_v22_cadastros.sql no Supabase para persistir os cadastros pendentes e aprovações.
+
+Observação de segurança:
+- A senha numérica desta v22 é um fluxo nativo simplificado para testes/validação.
+- Antes de produção real, o ideal é trocar para autenticação segura com Supabase Auth ou hash no backend.

@@ -1,0 +1,20 @@
+Correção aplicada para Vercel:
+
+1. O projeto já contém package.json com next em dependencies.
+2. O erro anterior acontecia durante o comando npm install da Vercel:
+   npm error Exit handler never called!
+3. Foi adicionado vercel.json para forçar:
+   - framework: nextjs
+   - installCommand: npm ci --no-audit --no-fund
+   - buildCommand: npm run build
+4. npm ci usa package-lock.json e costuma ser mais estável em CI/deploy do que npm install.
+5. O package.json permanece com:
+   - engines.node = 20.x
+   - packageManager = npm@10.9.2
+
+Se ainda falhar na Vercel, entrar em Settings > General > Build & Development Settings e conferir:
+- Framework Preset: Next.js
+- Root Directory: vazio / raiz do repositório
+- Install Command: npm ci --no-audit --no-fund
+- Build Command: npm run build
+- Node.js Version: 20.x

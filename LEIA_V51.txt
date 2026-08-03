@@ -1,0 +1,28 @@
+Chegou Motoca v51 - operação real, push e aceite duplicado
+
+Base: v50.
+
+Alterações:
+- Removido botão "Enviar teste de aviso" da página de instalação.
+- Removida notificação local de teste disparada pelo service worker.
+- Login agora mostra texto por perfil: entregador usa "Usuário, e-mail ou CPF"; estabelecimento usa "Usuário, e-mail ou CNPJ".
+- Motoboy com Bag em andamento/aguardando confirmação não abre aceite silencioso: mostra aviso claro para finalizar a entrega atual antes de aceitar outra.
+- No mesmo aviso, há botão "Silenciar esta Bag" para ocultar aquela solicitação para o entregador.
+- Service Worker, version.json e package.json atualizados para v51/0.3.1.
+- Criada API /api/push/send-bag para disparo remoto de nova Bag via Web Push, sem dependência externa de pacote web-push.
+- Ao publicar Bag detalhada ou express, o app chama /api/push/send-bag para notificar motoboys inscritos.
+- PwaManager tenta salvar/atualizar inscrição push quando a permissão já está liberada, usando a sessão atual do usuário.
+
+Configuração necessária na Vercel para push remoto real:
+NEXT_PUBLIC_VAPID_PUBLIC_KEY
+VAPID_PRIVATE_KEY
+VAPID_SUBJECT=mailto:chegoumotoca@gmail.com
+SUPABASE_SERVICE_ROLE_KEY
+
+SQL:
+- Não há alteração obrigatória de estrutura se o SQL v44 de push_subscriptions já foi aplicado.
+- Arquivo opcional para teste limpo: chegoumotoca_v51_reset_teste_limpo.sql
+
+Observações importantes:
+- Android: pode receber push com PWA/navegador fechado se permissão e service worker estiverem ok.
+- iPhone/iOS: para receber push, o usuário precisa adicionar o app à tela inicial, abrir por esse ícone e então permitir notificações. iOS 16.4+ é necessário.

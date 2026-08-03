@@ -1,0 +1,14 @@
+CHEGOU MOTOCA - V25 HOME MAIS OBJETIVA
+
+Base: v24 que subiu corretamente na Vercel.
+
+Ajustes principais:
+- Página inicial mais curta e objetiva, com foco em caber melhor na tela do PC.
+- Removidas seções internas/desnecessárias para usuário final, como "novidades aplicadas" e "lançamento local".
+- Destaque para benefícios práticos: Bag express/detalhada, mapa em um toque, aceite com confirmação e contato no momento certo.
+- Ícones enviados pelo usuário aplicados na home: caixa de entrega, capacete, entrega/mapa e WhatsApp.
+- Taxa de 10% não aparece mais como argumento comercial na página inicial.
+- Mantido padrão de deploy que funcionou na Vercel: sem package-lock, sem .git, sem .next, sem node_modules e sem vercel.json.
+
+Observação:
+A taxa da plataforma continua sendo regra operacional/admin, não chamada da home.

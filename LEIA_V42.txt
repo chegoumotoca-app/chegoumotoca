@@ -1,0 +1,19 @@
+Chegou Motoca v42 — Perfil funcional e menu corrigido
+
+Principais ajustes:
+- Menu do perfil do motoboy e estabelecimento agora fecha ao escolher uma opção funcional.
+- Itens que antes abriam por trás do menu foram movidos para tela própria.
+- Motoboy: tela Meu perfil com Dados pessoais, Moto/placa/PIX e Cadastro e documentos.
+- Motoboy: foto de perfil pode ser enviada/modificada; CNH/documento pode ser anexado/trocado.
+- Estabelecimento: tela Meu perfil com Dados, Responsável/WhatsApp, Endereço base e Logo/foto.
+- Estabelecimento: logo/foto pode ser enviada/modificada e aparece no botão do perfil.
+- Popover do perfil agora tem altura máxima com rolagem segura, evitando esconder conteúdo em monitor/TV/zoom diferente.
+- Clique na logo dentro das dashboards volta para o início da dashboard e sobe a página.
+- Botões/atalhos do perfil não deixam mais a seção carregada escondida atrás do menu.
+- Link de Suporte Chegou Motoca usa wa.me em navegação direta para reduzir bloqueios do navegador.
+
+SQL:
+- Não precisa rodar SQL novo se o SQL v40 unificado já foi executado com sucesso.
+
+Observação:
+- As alterações de perfil ficam salvas localmente nesta etapa e preparadas para futura validação/admin. Dados sensíveis devem ser conferidos pelo administrador.

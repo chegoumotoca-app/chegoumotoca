@@ -1,0 +1,15 @@
+V27 - refino visual e operacional
+
+- Home ajustada: menos texto técnico, mais foco em dores reais de estabelecimento e motoboy.
+- Login e recuperação de acesso repaginados.
+- Header/logo padronizados e maiores.
+- Tema claro corrigido para não apagar cards/botões.
+- Painéis de estabelecimento, motoboy e admin usam classes visuais globais mais consistentes.
+- Motoboy: botão mostra ação clara: "Ficar offline" quando online e "Ficar online" quando offline.
+- Motoboy: escolha online/offline fica gravada no estado local imediatamente e sincroniza em segundo plano.
+- Admin: visão geral mostra estabelecimentos, motoboys cadastrados e motoboys online.
+- Admin: cadastro manual agora pede senha inicial de 4 a 6 dígitos.
+- Adicionado SQL opcional: chegoumotoca_v27_acesso_manual.sql.
+
+Observação:
+O SQL de acesso manual é para MVP/teste. Para produção real, usar Supabase Auth ou backend com senha criptografada.

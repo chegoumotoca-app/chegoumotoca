@@ -1,0 +1,44 @@
+Chegou Motoca v35
+
+Prioridades desta versão:
+- Corrige o fluxo de login do estabelecimento e evita quebra total da tela /estabelecimento.
+- Adiciona proteção visual: se algum dado do estabelecimento falhar, aparece uma tela de recuperação em vez de página quebrada.
+- Reforça o vínculo do usuário speed_teste ao estabelecimento Speed Teste Taquaritinga no SQL.
+- Atualiza cache/sessão para v35 e limpa sessões antigas ao sair.
+- Ajusta menu de perfil por tipo de usuário: admin, estabelecimento e motoboy não veem as mesmas opções.
+- Corrige logout real: sair limpa sessão e redireciona para /login ou /admin/login.
+- Superadmin agora tem cadastro de admin com WhatsApp.
+- Senha de admin/superadmin passa a aceitar senha forte com letras/números/símbolos, mínimo 8 caracteres.
+- Admin local/estabelecimento/motoboy continuam com lógica de senha simples quando aplicável.
+- Superadmin ganha botões de WhatsApp, resetar senha, pausar/reativar e remover acesso de admin local.
+- Ações sensíveis de admin pedem senha do superadmin e registram log no banco.
+
+Antes de testar:
+1. Rode no Supabase o arquivo:
+   chegoumotoca_v35_login_estabelecimento_superadmin.sql
+2. Depois suba o projeto para Git/Vercel.
+3. Limpe os dados do site no navegador se ainda houver sessão antiga.
+
+Acessos de teste após o SQL:
+/login
+- Tipo: Estabelecimento
+- Usuário: speed_teste
+- Senha: 123456
+
+/login
+- Tipo: Entregador
+- Usuário: motoca_teste
+- Senha: 123456
+
+/admin/login
+- Cidade: Taquaritinga/SP
+- Usuário: admin
+- Senha: ak2026153143
+
+/admin/login
+- Cidade: Plataforma Geral
+- Usuário: superadmin
+- Senha: ak2026153143
+
+Observação:
+Esta versão foi validada com npm run build localmente.

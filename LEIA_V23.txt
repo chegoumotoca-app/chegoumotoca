@@ -1,0 +1,25 @@
+Chegou Motoca v23 - ajustes de lançamento rápido
+
+Base usada: v22 estilo v21 (sem package-lock, sem vercel.json, sem .npmrc, sem engines/packageManager), porque este padrão foi o que subiu rápido na Vercel.
+
+O que entrou:
+- Home repaginada, mais limpa e comercial, com CTA de cadastro e entrada.
+- Home com alternância visual claro/escuro no front.
+- Menu inferior responsivo na home com Início, Como, Cadastrar e Entrar.
+- Cadastro de motoboy agora usa input accept=image/* capture=user para permitir tirar foto no celular ou enviar arquivo.
+- Painel admin ganhou taxa da plataforma editável em Configurações.
+- Padrão da taxa: 10%.
+- Cálculo de repasse do motoboy agora mostra valor líquido: exemplo, R$ 8,00 com 10% = R$ 7,20 para o motoboy.
+- Conferência do motoboy mostra foto/avatar, PIX, WhatsApp, e-mail quando houver, valor bruto, taxa da plataforma, valor líquido e repasse pendente.
+- Botão de copiar PIX na conferência.
+- Cadastro manual no admin foi ampliado para motoboy e estabelecimento com usuário, e-mail e campos básicos.
+- Motoboy passa a ver valores líquidos nos cards de repasse/pagamento.
+
+SQL opcional da v23:
+- Rode chegoumotoca_v23_taxa_plataforma.sql para criar a coluna platform_fee_percent na tabela payment_settings.
+- Se não rodar, a interface ainda usa fallback local, mas salvar a taxa no Supabase pode falhar.
+
+Importante para deploy:
+- Mantive o padrão que funcionou na Vercel: sem package-lock.json no ZIP.
+- Não enviar node_modules, .next ou .git.
+- Subir com git push --force como nas versões anteriores.

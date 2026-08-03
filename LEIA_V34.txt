@@ -1,0 +1,49 @@
+Chegou Motoca v34
+
+Foco desta versão:
+- Corrigir o login real iniciado na v33.
+- Remover dependência de usuário demo visual/fallback automático.
+- Evitar quebra da página se o usuário entrar, mas ainda não tiver estabelecimento/motoboy vinculado.
+- Melhorar texto público do login.
+- Trocar botão "Ver" da senha por ícone de olho.
+- Ajustar menu de perfil logado: sair/editar dados/perfil, sem "recuperar acesso" dentro da conta.
+- Criar base para superadmin gerenciar administradores locais.
+- Permitir login por usuário, e-mail, CPF/CNPJ ou WhatsApp/celular normalizado.
+- Adicionar reset de senha pelo admin, sem exibir senha antiga.
+
+Antes de testar:
+1. Rode no Supabase o arquivo:
+   chegoumotoca_v34_login_multicidade_creditos_admins.sql
+
+Usuários de teste depois do SQL:
+/login
+- Tipo: Estabelecimento
+- Usuário: speed_teste
+- Senha: 123456
+
+/login
+- Tipo: Entregador
+- Usuário: motoca_teste
+- Senha: 123456
+
+/admin/login
+- Cidade: Taquaritinga/SP
+- Usuário: admin
+- Senha: ak2026153143
+
+/admin/login
+- Cidade: Plataforma Geral
+- Usuário: superadmin
+- Senha: ak2026153143
+
+Observação de segurança:
+- O admin não vê senha antiga.
+- Se alguém esquecer, o admin deve resetar para uma nova senha temporária de 4 a 6 dígitos.
+- Em produção futura, migrar o login para Supabase Auth completo.
+
+Próximos passos sugeridos:
+- Zerar dados antigos quando o fluxo de login, cadastro e créditos estiver aprovado.
+- Testar cadastro real de estabelecimento e entregador.
+- Aprovar cadastros pelo admin.
+- Testar solicitação/aprovação de créditos.
+- Depois disso, avançar para raio de distância por endereço aprovado.

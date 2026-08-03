@@ -1,0 +1,23 @@
+Chegou Motoca v36
+
+Foco desta versão:
+- Corrige o erro em que o login de estabelecimento era reconhecido, mas /estabelecimento caía em tela de erro.
+- Troca chaves de cache para v36 para evitar dados locais antigos da v35/v34 quebrando a tela.
+- Sanitiza valores numéricos de créditos, valores de entrega e Bags para evitar erro de .toFixed quando algum dado antigo vem como texto ou vazio.
+- Remove fallback perigoso que abria qualquer estabelecimento quando o usuário logado não estava vinculado ao estabelecimento correto.
+- Se o estabelecimento não estiver vinculado, agora exibe aviso claro em vez de quebrar a página.
+- Inclui SQL v36 para reforçar o vínculo do speed_teste e reparar app_users de estabelecimentos aprovados.
+
+Ordem de uso:
+1. Rode o SQL chegoumotoca_v36_estabelecimento_login_fix.sql no Supabase.
+2. Suba esta pasta no Git/Vercel.
+3. Depois do deploy, limpe os dados do site no navegador ou clique em sair e entrar novamente.
+4. Teste:
+   /login -> Estabelecimento -> speed_teste / 123456
+   /login -> Entregador -> motoca_teste / 123456
+   /admin/login -> admin / ak2026153143
+   /admin/login -> superadmin / ak2026153143
+
+Importante:
+- O SQL termina com uma consulta de diagnóstico mostrando os usuários de teste e entity_id.
+- Para speed_teste, entity_id precisa aparecer como 40000000-0000-4000-8000-000000000001.

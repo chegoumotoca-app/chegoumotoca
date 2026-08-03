@@ -1,0 +1,49 @@
+CHEGOU MOTOCA - V24 LANDING E CONVERSAO
+
+Base usada: v23_lancamento_rapido, mantendo o padrão que subiu rápido na Vercel:
+- sem package-lock.json
+- sem node_modules
+- sem .next
+- sem .git
+- sem vercel.json
+- sem engines/packageManager forçados
+
+O que entrou:
+1. Página inicial refeita com copy mais comercial:
+   Motoboys disponíveis para entregas rápidas na sua cidade.
+   Mais controle para o estabelecimento. Mais oportunidades para o entregador.
+
+2. O termo Bag deixou de ser o primeiro contato do usuário novo.
+   A home fala primeiro em entregas rápidas e depois explica que, dentro da operação, cada solicitação vira uma Bag.
+
+3. Home com foco em conversão:
+   - botões separados para estabelecimento e motoboy
+   - CTA principal de cadastro
+   - CTA de login
+   - bloco de funcionamento em 4 passos
+   - bloco de novidades aplicadas ao nicho
+   - CTA final para primeiros testes
+
+4. Mobile/responsivo:
+   - menu inferior com Início, Como, Entrar e Cadastrar
+   - botões maiores e mais claros
+   - visual mais próximo de app
+
+5. Novidades aplicadas ao nicho:
+   - tempo/status ao vivo
+   - prova de entrega/anexos
+   - rank/prioridade como direção de produto
+   - contato rápido via WhatsApp no momento certo
+
+6. Mantido o cadastro com captura de foto pelo celular:
+   input accept=image/* capture=user
+
+Comandos sugeridos:
+git init
+git branch -M main
+git remote add origin https://github.com/chegoumotoca-app/chegoumotoca.git
+git config user.name "chegoumotoca-app"
+git config user.email "chegoumotoca@gmail.com"
+git add .
+git commit -m "feat: v24 landing comercial e conversao"
+git push -u origin main --force

@@ -1,0 +1,26 @@
+Chegou Motoca v50 — Revisão do painel admin, feedback e raio
+
+Base: v49.
+
+O que foi revisado/adicionado:
+- Nova aba do admin: Avaliações e sugestões.
+- Formulário público /avaliacoes agora grava mensagens no store e, com SQL aplicado, na tabela app_feedbacks.
+- Admin pode marcar feedback como em análise/resolvido e responder pelo WhatsApp quando informado.
+- Aba de avaliações mostra comentários/tags/notas das Bags finalizadas.
+- Financeiro ganhou filtros rápidos: Hoje, 7 dias, 30 dias e Tudo.
+- Dashboard ganhou contador de feedbacks abertos.
+- Cadastro manual de estabelecimento no admin ganhou campo de raio normal em km.
+- Lista de estabelecimentos mostra endereço base e raio configurado.
+- Botões existentes revisados: resetar senha, bloquear e reativar; adicionado pausar estabelecimento e pausar motoboy online.
+- Configuração de raio no painel do estabelecimento agora tenta persistir no Supabase, não só no localStorage.
+- SQL novo: chegoumotoca_v50_admin_feedback_raio.sql.
+
+Raio/distância:
+- O app usa coordenadas do endereço base do estabelecimento e coordenadas do destino.
+- Quando reconhece os dois pontos, calcula distância aproximada em linha reta com fórmula Haversine.
+- Se a distância for maior que o raio normal configurado, classifica a entrega como distante.
+- Se não conseguir geocodificar, mantém fallback por bairro/regra existente.
+
+Observação técnica:
+- npm ci foi executado com sucesso no ambiente.
+- npm run build compilou e passou TypeScript, mas o processo foi encerrado por tempo durante geração das páginas estáticas no ambiente. Não apareceu erro de código até a etapa concluída.

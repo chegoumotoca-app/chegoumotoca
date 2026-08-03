@@ -1,0 +1,17 @@
+Chegou Motoca v38
+
+Principais correções/evoluções:
+- Bag Express agora exige pelo menos bairro ou referência antes de enviar.
+- Se faltar referência, o sistema avisa claramente e não cria a Bag nem desconta crédito.
+- Header/logomarca respeita usuário logado: clicar na logo volta para a dashboard correta em vez de parecer deslogar.
+- Botão público vira "Meu painel" quando existe sessão ativa.
+- Menu de perfil ganhou ações clicáveis por tipo de conta e suporte via WhatsApp.
+- Estabelecimento ganhou opção de logo/foto no menu de perfil.
+- Adicionadas páginas /sobre e /avaliacoes.
+- Rodapé do Chegou Motoca adicionado em páginas públicas e painéis principais.
+- Após finalizar uma Bag, estabelecimento pode avaliar o entregador com estrelas, tags e comentário.
+- Histórico do motoboy passa a exibir Bags finalizadas mesmo com pagamento pendente.
+- Tela de cadastro de estabelecimento separa CEP, rua, número, bairro e complemento, com busca por CEP.
+
+SQL:
+Rode chegoumotoca_v38_bag_ratings_footer_profile.sql no Supabase para salvar avaliações no banco.

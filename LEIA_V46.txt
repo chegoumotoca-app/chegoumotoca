@@ -1,0 +1,25 @@
+Chegou Motoca v46 — correção de deploy Vercel e instalação no iPhone
+
+Base: v45
+
+Correções principais:
+1. Deploy na Vercel
+- Adicionado vercel.json com installCommand usando npm ci e cache temporário do build.
+- Adicionado engines.node = 20.x no package.json e .nvmrc com Node 20.
+- Adicionado packageManager npm@10.9.2.
+- package-lock.json foi limpo para usar registry público npmjs.org, removendo URLs internas do ambiente de geração.
+- Objetivo: evitar o erro da Vercel no passo "npm install" / "Exit handler never called" e reduzir dependência de cache antigo.
+
+2. Instalação no iPhone
+- O aviso automático agora aparece também no iPhone quando o navegador não dispara o botão nativo de instalação.
+- Detecta Chrome no iPhone e mostra orientação própria: Compartilhar > Adicionar à Tela de Início.
+- Mantém orientação para Safari no iPhone: Compartilhar > Adicionar à Tela de Início.
+- Página /instalar recebeu passo a passo extra para iPhone usando Chrome.
+
+3. PWA
+- Service worker atualizado para v46.
+- version.json atualizado para v46 para acionar aviso de nova versão.
+
+Após subir:
+- Na Vercel, se o erro persistir por cache antigo, use Redeploy com Clear Build Cache.
+- Não há SQL novo obrigatório nesta v46; mantém o SQL v45 para raio/permissões.

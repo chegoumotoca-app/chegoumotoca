@@ -1,0 +1,13 @@
+Correção aplicada na v29:
+
+- Corrigido erro de TypeScript em src/app/estabelecimento/page.tsx.
+- O trecho comparava section === "inicio", mas o tipo SectionKey não tinha esse valor.
+- Ajustado para section === "visao-geral".
+- npm run build validado com sucesso localmente.
+
+Mantido padrão de deploy que funcionou na Vercel:
+- sem node_modules
+- sem .next
+- sem .git
+- sem package-lock.json
+- sem vercel.json

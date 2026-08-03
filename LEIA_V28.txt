@@ -1,0 +1,21 @@
+Chegou Motoca - v28 refino de ícones e painéis
+
+Ajustes principais:
+- Ícones enviados pelo usuário foram copiados para public/icons e reutilizados em home, login, cadastro, estabelecimento, motoboy e admin.
+- Botões de perfil passaram a usar capacete para motoboy e estabelecimento para estabelecimento.
+- Cadastro do motoboy agora separa as ações: Tirar foto e Enviar imagem.
+- WhatsApp da plataforma foi renomeado para Falar com a equipe Chegou Motoca.
+- Menu/sidebar dos painéis usa ícones mais coerentes: créditos, histórico, entregas em andamento, finalizadas, não finalizadas, capacete, estabelecimento e mapa.
+- Botões de saída/destrutivos receberam estilo vermelho.
+- Status online/offline do motoboy usa texto mais direto: Ficar offline ou Ficar online.
+- Home manteve linguagem comercial e evitou texto interno/técnico.
+
+Observação:
+Este ZIP mantém o padrão que funcionou no deploy da Vercel:
+- sem node_modules
+- sem .next
+- sem .git
+- sem package-lock.json
+- sem vercel.json
+
+Se precisar validar localmente, rode npm install e npm run build antes do push.

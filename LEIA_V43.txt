@@ -1,0 +1,12 @@
+Chegou Motoca v43 - Correções mobile, perfil, cadastro e PWA
+
+- Corrige header mobile para avatar/foto não sair da tela no Samsung S21 e telas estreitas.
+- Simplifica menu do perfil do motoboy: Meu perfil / dados, Pagamentos, Anexos, Minhas avaliações, Suporte e Sair.
+- Mantém dados pessoais, foto, moto, placa, PIX, cadastro e documentos dentro da tela Meu perfil.
+- Separa CNH/documento em duas ações: Tirar foto da CNH e Enviar imagem da CNH.
+- Ajusta safe-area/rodapé mobile para o menu inferior não ficar atrás dos botões nativos do Android.
+- Prepara prompt nativo de instalação PWA quando o navegador disponibilizar o evento de instalação.
+- Melhora cadastro com máscara de WhatsApp, CPF/CNPJ, validações em tempo real e olho em senha/confirmar senha.
+- Mantém modais nativos da plataforma.
+
+Não há SQL novo nesta versão.

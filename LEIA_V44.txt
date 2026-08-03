@@ -1,0 +1,31 @@
+Chegou Motoca v44 - PWA, instalação, ícone oficial e notificações base
+
+Base usada: v43_mobile_pwa_cadastro_fix.
+
+O que mudou nesta versão:
+- Troca o ícone padrão/ruim da Vercel pelo ícone oficial do Chegou Motoca no favicon, manifest, Apple touch icon e PWA.
+- Gera ícones versionados v44 em vários tamanhos: 72, 96, 128, 144, 152, 180, 192, 384, 512 e maskable 192/512.
+- Atualiza o manifest com start_url, scope, display standalone, tema escuro, atalhos e ícones any/maskable.
+- Adiciona service worker em public/sw.js para PWA, push, clique em notificação e notificação de teste.
+- Adiciona version.json e PwaManager com aviso de nova versão/atualizar agora.
+- Adiciona área /instalar para instalação manual/download do PWA, instruções Android/iPhone e ativação de notificações.
+- Atualiza o prompt de instalação para oferecer link “Ver opções”.
+- Adiciona link “Instalar app” na home, rodapé e navegação mobile pública.
+- Adiciona prompt controlado de notificações: o app mostra um pedido próprio e só chama a permissão nativa após clique do usuário.
+- Adiciona API /api/push/subscribe para salvar inscrição push no Supabase quando a chave VAPID pública estiver configurada.
+- Adiciona SQL chegoumotoca_v44_push_subscriptions.sql para criar tabela de inscrições push.
+
+Importante sobre atualizações:
+- Funções/telas/correções atualizam pelo deploy quando o usuário abre/reabre o app.
+- Ícone do PWA pode demorar para trocar em Android/iOS por cache do sistema; em alguns aparelhos pode exigir remover o atalho/app e instalar novamente.
+- A v44 usa nomes de ícone versionados para aumentar a chance de atualização automática.
+
+Importante sobre notificações:
+- A permissão de notificações é solicitada corretamente após ação do usuário.
+- A notificação de teste funciona com service worker e permissão concedida.
+- Push remoto real com o app fechado depende de HTTPS, chave VAPID pública/privada e backend/Edge Function para enviar os eventos.
+- Configure NEXT_PUBLIC_VAPID_PUBLIC_KEY no front e a chave privada no backend de envio.
+- Aplique o SQL v44 para salvar inscrições push no Supabase.
+
+SQL novo nesta versão:
+- chegoumotoca_v44_push_subscriptions.sql

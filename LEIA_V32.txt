@@ -1,0 +1,33 @@
+Chegou Motoca v32
+
+Objetivo da versão:
+- sair do modo demo visual;
+- remover entrada automática como estabelecimento/motoboy;
+- adicionar login real por usuário/senha via Supabase RPC;
+- criar usuários de teste no banco por SQL;
+- corrigir solicitação/aprovação de créditos para aparecer no admin;
+- exibir PIX da plataforma configurável no painel de créditos do estabelecimento;
+- criar login admin em /admin/login;
+- criar menu financeiro no admin com bruto, taxa da plataforma e repasse.
+
+Antes de subir/testar:
+1. Rode o SQL chegoumotoca_v32_auth_creditos.sql no Supabase SQL Editor.
+2. Suba o ZIP no Git/Vercel.
+3. Teste os acessos:
+   - admin / senha informada no SQL
+   - speed_teste / 123456
+   - motoca_teste / 123456
+
+Observação de segurança:
+- As senhas não ficam escritas no código do frontend.
+- O SQL cria hashes com pgcrypto.
+- Para produção final, a autenticação deve evoluir para Supabase Auth completo com RLS mais rígido.
+
+Fluxo de crédito esperado:
+1. speed_teste entra em /login.
+2. Vai em Créditos.
+3. Visualiza/copia a chave PIX configurada pelo admin.
+4. Registra solicitação.
+5. admin entra em /admin/login.
+6. Abre Créditos e aprova.
+7. O saldo aparece para o estabelecimento no refresh automático.

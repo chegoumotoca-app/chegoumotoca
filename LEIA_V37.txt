@@ -1,0 +1,19 @@
+Chegou Motoca v37
+
+Correção emergencial do painel do estabelecimento.
+
+O que foi corrigido:
+- Corrige o erro React Minified #310 no /estabelecimento.
+- A causa era um hook useMemo posicionado depois de returns condicionais.
+- O login do estabelecimento estava correto, mas a renderização mudava a quantidade de hooks após a sessão carregar.
+- Atualiza chaves de cache/sessão para v37.
+
+SQL:
+- Não há novo SQL obrigatório se o SQL v36 já foi executado e speed_teste aparece com entity_id preenchido.
+
+Teste após subir:
+1. Limpar dados do site ou abrir aba anônima.
+2. Acessar /login.
+3. Selecionar Estabelecimento.
+4. Usuário: speed_teste
+5. Senha: 123456

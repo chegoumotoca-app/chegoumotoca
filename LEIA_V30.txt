@@ -1,0 +1,19 @@
+Chegou Motoca v30
+
+Foco da versão:
+- Ajustes acumulados da análise da v29.
+- Cabeçalho mais padrão de app/site, com logo integrada, tema por ícone e perfil no topo.
+- Remoção do card fixo do motoboy no mobile.
+- Menu mobile com melhor contraste e alerta visual para Bags.
+- Textos ajustados para usuário final, sem frases internas de desenvolvimento.
+- Termos de uso com linguagem mais dinâmica e comercial.
+
+Padrão de deploy mantido:
+- Sem node_modules
+- Sem .next
+- Sem .git
+- Sem package-lock.json
+- Sem vercel.json
+
+Observação:
+A instalação de dependências não foi executada neste ambiente, então não foi possível validar npm run build aqui. O pacote foi mantido no mesmo padrão de versões que subiram corretamente na Vercel.

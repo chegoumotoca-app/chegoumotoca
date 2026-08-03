@@ -1,0 +1,26 @@
+V31 - ajustes após análise mobile
+
+Alterações principais:
+- Header público mais compacto e padronizado nas páginas públicas.
+- Botão do topo ajustado para não empurrar o botão de tema no mobile.
+- Texto público adotado: "Acesse ou cadastre-se".
+- Removida informação pública sobre acesso administrativo (/admin) da página de login.
+- Card e página de recuperação agora usam ícone do WhatsApp.
+- Termos de uso com linguagem para usuário final, sem texto de bastidor/programador.
+- Menu inferior mobile com contraste reforçado no modo escuro e claro.
+- Mantido "Pagamentos" no menu do motoboy.
+- Admin: removida configuração global de bairros distantes como regra principal.
+- Admin: adicionada simulação de valores, taxa operacional e repasse estimado antes de salvar regras.
+- Estabelecimento: adicionada base visual para endereço do estabelecimento e raio de distância, com aviso de aprovação futura pelo admin.
+
+Validação:
+- npm install --no-audit --no-fund
+- npm run build
+- Build concluído com sucesso localmente.
+
+Empacotamento mantido no padrão que funcionou na Vercel:
+- sem node_modules
+- sem .next
+- sem .git
+- sem package-lock.json
+- sem vercel.json

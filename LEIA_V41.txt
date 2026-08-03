@@ -1,0 +1,16 @@
+Chegou Motoca v41 — ajustes mobile, perfil, rodapé e navegação
+
+Principais ajustes:
+- Menu inferior do motoboy ficou mais limpo: Início, Bags, Rota e Histórico.
+- Pagamentos, Anexos e Minhas avaliações foram movidos para atalhos do menu do perfil/bonequinho.
+- Status Online/Offline agora aparece como toggle compacto no cabeçalho do motoboy.
+- Foto do usuário/entregador/estabelecimento passa a aparecer no botão de perfil quando existir imagem salva.
+- Perfil do motoboy concentra “Cadastro e documentos”, em vez de Foto e Documentos soltos.
+- Rodapé corrigido no desktop/notebook para não ficar quebrado/espremido nas dashboards.
+- Páginas públicas ganharam navegação mobile consistente: Início, O que é e Acessar.
+- Cadastro mobile ganhou seletor de tipo no topo do formulário: Entregador ou Estabelecimento.
+- Ao tentar sair/trocar tipo no cadastro com dados preenchidos, abre modal nativo da plataforma.
+- Botões de WhatsApp de suporte/contato usam ícone local de WhatsApp onde ajustado.
+
+SQL:
+- Esta versão não exige novo SQL obrigatório se o SQL v40 unificado já foi executado com sucesso.

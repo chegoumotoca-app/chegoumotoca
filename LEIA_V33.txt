@@ -1,0 +1,25 @@
+Chegou Motoca v33
+
+Foco desta versão:
+- corrigir login da v32 sem usar crypt(), evitando erro "function crypt(text,text) does not exist";
+- separar login público por tipo de acesso: estabelecimento ou entregador;
+- adicionar botão Ver/Ocultar senha;
+- criar /admin/login com cidade/operação e suporte a admin/superadmin;
+- impedir acesso direto aos painéis de estabelecimento/motoboy sem sessão do tipo correto;
+- preparar base multi-cidade com app_cities e usuário superadmin;
+- corrigir estrutura de créditos para chegar ao painel admin com city_id/requested_by_user_id;
+- manter teste inicial em Taquaritinga.
+
+Ordem de uso:
+1. Rode o SQL chegoumotoca_v33_login_multicidade_creditos.sql no Supabase.
+2. Suba a versão no Git/Vercel.
+3. Teste /login:
+   - tipo Estabelecimento: speed_teste / 123456
+   - tipo Entregador: motoca_teste / 123456
+4. Teste /admin/login:
+   - cidade Taquaritinga/SP: admin / ak2026153143
+   - Plataforma Geral: superadmin / ak2026153143
+
+Observação:
+- As senhas não ficam no frontend/código React. Elas são gravadas no banco como hash simples para MVP.
+- Para produção final, a recomendação continua sendo migrar para Supabase Auth com recuperação de senha por e-mail.

@@ -1,0 +1,27 @@
+Chegou Motoca v47 — guia visual de instalação
+
+Base: v46.
+
+O que foi alterado:
+- Foram geradas três imagens profissionais de passo a passo para a página /instalar:
+  - public/install/passo-android-v47.png
+  - public/install/passo-iphone-safari-v47.png
+  - public/install/passo-iphone-chrome-v47.png
+- A página /instalar passou a exibir as imagens novas em vez dos SVGs simples anteriores.
+- O guia visual agora mostra instruções separadas para Android, iPhone Safari e iPhone Chrome.
+- O service worker foi versionado para v47.
+- public/version.json atualizado para versão 47.
+- package.json atualizado para 0.2.7.
+
+Observações:
+- Não há SQL novo na v47.
+- Continua usando o SQL da v45 caso ainda não tenha sido aplicado.
+- Build testado com sucesso usando npm run build.
+- No ambiente local de teste, apareceu apenas aviso de versão do Node porque o container usa Node 22, mas o projeto está travado para Node 20 na Vercel via .nvmrc/engines.
+
+Deploy recomendado:
+1. Extrair o ZIP.
+2. Rodar npm ci ou npm install.
+3. Rodar npm run build.
+4. Subir para o GitHub.
+5. Na Vercel, se necessário, redeploy com Clear Build Cache.

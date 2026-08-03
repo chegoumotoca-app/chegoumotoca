@@ -1,0 +1,19 @@
+Chegou Motoca v29
+
+Ajustes principais:
+- Header público com botões Entrar/Cadastrar também no mobile.
+- Botão de tema com ícone de sol/lua.
+- Melhor contraste do modo claro, principalmente header, cards, botões e logo.
+- Cadastro com termos, cancelar/voltar, prévia dos dados e confirmação antes de enviar.
+- Cadastro separa tirar foto e enviar imagem.
+- Página /termos adicionada com regras básicas editáveis futuramente pelo admin.
+- Login com linguagem mais voltada ao Chegou Motoca e sem expor usuário/senha em destaque.
+- Estabelecimento: topo mobile menos invasivo ao sair da visão geral; botões de crédito com ícones.
+- Motoboy: menu mobile com 6 ações para aproximar do uso em PWA.
+
+Mantido o padrão de deploy que funcionou na Vercel:
+- sem node_modules
+- sem .next
+- sem .git
+- sem package-lock.json
+- sem vercel.json

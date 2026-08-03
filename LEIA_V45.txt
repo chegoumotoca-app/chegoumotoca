@@ -1,0 +1,31 @@
+Chegou Motoca v45 — instalação limpa, permissões e raio de entrega
+
+Base: v44.
+
+Principais ajustes:
+- Página /instalar revisada para usuário final, sem textos internos de desenvolvimento.
+- Removidos termos visíveis como versão técnica, Vercel, SQL, VAPID e mensagens de backend da experiência do usuário.
+- Adicionados cards e imagens de passo a passo para Android e iPhone.
+- Mensagens profissionais antes de pedir notificações e localização.
+- Notificações explicadas como forma de não perder novas entregas, confirmações e avisos.
+- Localização explicada como apoio para rota, distância e entrega normal/distante.
+- Aviso global de permissão de localização além de notificações.
+- Painel do estabelecimento ganhou configuração de endereço base e raio de entrega normal.
+- Bag detalhada tenta calcular distância por endereço/localização; fora do raio configurado entra como distante.
+- Quando não consegue calcular a distância, mantém fallback por regra de bairro.
+- SQL v45 incluso para preparar Supabase com colunas de raio/localização/distância.
+
+Arquivos importantes:
+- src/app/instalar/page.tsx
+- src/components/pwa-install-panel.tsx
+- src/components/pwa-manager.tsx
+- src/app/estabelecimento/page.tsx
+- src/app/cadastro/page.tsx
+- public/install/android-install.svg
+- public/install/iphone-install.svg
+- public/version.json
+- public/sw.js
+- chegoumotoca_v45_instalacao_permissoes_raio.sql
+
+Observação:
+O cálculo por distância depende de endereço reconhecido pelo serviço de geocodificação. Se não houver coordenadas, o app volta para a regra de bairros já existente.

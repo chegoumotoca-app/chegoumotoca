@@ -1,0 +1,17 @@
+Chegou Motoca v26 - Home e responsividade refinadas
+
+Ajustes aplicados:
+- Página inicial ficou mais objetiva e com menos blocos longos.
+- Removidos textos internos/desnecessários para usuário final.
+- Removida menção visual à taxa de 10% na home.
+- Logo ampliada e padronizada no cabeçalho público e nos painéis.
+- Troca de tema claro/escuro adicionada ao BrandHeader das páginas internas.
+- Ícones enviados pelo usuário copiados para public/icons e aplicados na home.
+- Corrigido o botão “Sou estabelecimento”, que agora usa ícone de estabelecimento.
+- Frase de WhatsApp reescrita para explicar contato com estabelecimento/entregador/cliente após aceite da Bag.
+- Removida frase solta sobre a Bag junto ao botão de cadastro.
+- Texto “Cadastro nativo v22” alterado para “Cadastro rápido”.
+- ZIP mantido no padrão que subiu rápido na Vercel: sem package-lock, sem node_modules, sem .next, sem .git e sem vercel.json.
+
+Observação:
+- Mantida a lógica de taxa no sistema/admin, mas a taxa não aparece na página inicial.

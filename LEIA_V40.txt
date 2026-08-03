@@ -1,0 +1,18 @@
+Chegou Motoca v40
+
+Principais ajustes:
+- Conferência do motoboy agora mostra resumo por entregador primeiro.
+- Bags ficam recolhidas em "Ver Bags" para não lotar a tela do admin.
+- Botões para marcar repasse total como pago via Pix ou dinheiro.
+- Modal nativo da plataforma para confirmações importantes do admin e cadastro.
+- Cadastro deixou de usar alert/confirm do navegador nas mensagens principais.
+- Login mobile prioriza o formulário de entrada antes dos cards de cadastro.
+- Home mobile mostra o mockup da Bag e cabeçalho sticky.
+- Rodapé desktop das dashboards ficou mais largo e centralizado; mobile mantido compacto.
+- Página/aba de avaliações do entregador separada, com média, distribuição e tags agregadas.
+- Histórico do motoboy não exibe nota individual de forma direta, para evitar conflito.
+- Bloquear/reativar contas pelo admin faz exclusão lógica: preserva histórico e desativa login.
+- SQL v40 cria função de bloqueio lógico e prepara auditoria/admin logs.
+- SQL v40 prepara tabela futura de jornada do motoboy (iniciar dia/encerrar dia/cálculo de combustível).
+
+Rode o SQL v40 no Supabase antes de testar os novos bloqueios/reativações no banco real.

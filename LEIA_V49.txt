@@ -1,0 +1,18 @@
+Chegou Motoca v49 - Tutoriais reais ampliáveis de instalação
+
+Base: v48.
+
+O que mudou:
+- Corrigida a página /instalar para usar os tutoriais exatamente da arte aprovada pelo usuário, separados em 3 imagens grandes e legíveis.
+- Android/Chrome: inclui o fluxo recomendado pelo modal nativo e também a alternativa pelo menu do Chrome quando o aviso não aparecer.
+- iPhone/Safari: mostra Compartilhar > Adicionar à Tela de Início > Adicionar.
+- iPhone/Chrome: mostra Compartilhar > Adicionar à Tela de Início > Adicionar.
+- Cada imagem pode ser aberta em tamanho maior pelo usuário.
+- Adicionado PDF baixável: public/install/guia-instalacao-chegou-motoca-v49.pdf.
+- version.json, service worker e package version atualizados para v49 / 0.2.9.
+
+SQL:
+- Não há SQL novo na v49. Se ainda não aplicou, usar o SQL da v45.
+
+Observação:
+- Esta versão foca em tutorial/instalação e não altera regras de negócio.
